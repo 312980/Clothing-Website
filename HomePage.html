@@ -1,0 +1,64 @@
+<style>
+h1{
+  margin: 50px 0px;
+  text-align: center;
+}
+p{
+  color: white;
+}
+input[type=text] {
+    width: 100%;
+    height: 25px;
+    padding-left: 15px;
+    margin: auto;
+    display: block;
+    position: relative;
+    border-radius: 15px;
+    border: 1.5px solid blue;
+    background-color: #274059;
+    background-color: rgba(39, 64, 89, 0.2);
+    color: white;
+    box-shadow: none;
+    outline: none;
+  }
+  .card {
+    position: relative;
+    align-self: center;
+    align-contents: center;
+    width: 500px;
+    height: 150px;
+    margin-top: 60px;
+    padding: 10px 5px;
+    border: 0px solid #274059;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    background-color: #274059;
+  }
+  .elements {
+    width: 85%;
+  }
+</style>
+
+
+<html>
+<head>
+<title>Home</title>
+</head>
+<body>
+  <h1> HomeGood's Store </h1>
+  <input type="text" placeholder="Search for an item">
+  <!-- Item Card -->
+  <div class="card" id="card" *ngFor="let item of items; let i = index">
+  <div class="elements">
+    <div class="details">
+      <p>{{item.name}}</p>
+      <p>{{item.price}}</p>
+    </div>
+    <div class="image">
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>
